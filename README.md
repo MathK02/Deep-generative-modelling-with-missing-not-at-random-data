@@ -53,10 +53,9 @@ Three ways to combine data $x$ and regime $u$:
 
 
 
-
 ### Requirements
 
-**Important**: This code uses TensorFlow 1.x (legacy). 
+⚠️ **Important**: This code uses TensorFlow 1.x (legacy). 
 
 **Tested configuration:**
 ```
@@ -67,7 +66,7 @@ numpy==1.19.5
 pandas==1.1.5
 scikit-learn==0.24.2
 matplotlib==3.3.4
-'''
+```
 
 
 ## Dataset Structure
