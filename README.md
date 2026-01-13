@@ -99,9 +99,7 @@ Datasets from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/i
 ### Training Dynamics
 
 <p align="center">
-  <img src="images/max_iter_banknote.png" width="30%"/>
-  <img src="images/max_iter_concrete.png" width="30%"/>
-  <img src="images/max_iter_red.png" width="30%"/>
+  <img src="images/architectures_comparaisons.png" width="200"/>
 </p>
 
 **Key Finding**: Extended model requires 50k-100k iterations to converge, but then significantly outperforms baseline.
