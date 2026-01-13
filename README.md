@@ -40,31 +40,33 @@ Three ways to combine data $x$ and regime $u$:
 ## List of Files
 
 1. `notMIWAE_extended.py`: Extended not-MIWAE model with regime variable
-2. `notMIWAE_base.py`: Baseline not-MIWAE implementation
-3. `create_correlated_mnar.py`: Generate correlated MNAR mechanisms
-4. `train.py`: Training script with hyperparameter configuration
-5. `evaluate.py`: Evaluation and visualization utilities
-
+2. `notMIWAE.py`: Baseline not-MIWAE implementation
+3. `trainer.py`: Training functions
+5. `main.py`: Evaluation 
 ## Features
 
 - **Regime Encoders**: Full encoder $q_\psi(u|x^o,s)$ and mask-only $q_\psi(u|s)$
 - **Multiple Architectures**: Concatenation, additive, and multiplicative variants
 - **Correlated MNAR Generation**: Tools to create realistic correlated missingness
 - **Importance Sampling**: Extended IWAE bound with dual proposals
-- **Comprehensive Evaluation**: RMSE, training curves, regime recovery analysis
-- **Visualization Tools**: Loss decomposition, latent space exploration
+- **Comprehensive Evaluation**: RMSE, curves can be added
+
 
 
 
 ### Requirements
+
+**Important**: This code uses TensorFlow 1.x (legacy). 
+
+**Tested configuration:**
 ```
-tensorflow>=2.8.0
-tensorflow-probability>=0.16.0
-numpy>=1.21.0
-pandas>=1.3.0
-scikit-learn>=1.0.0
-matplotlib>=3.5.0
-```
+python==3.7
+tensorflow==1.15.0
+tensorflow-probability==0.8.0
+numpy==1.19.5
+pandas==1.1.5
+scikit-learn==0.24.2
+matplotlib==3.3.4
 
 
 
