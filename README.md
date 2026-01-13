@@ -121,15 +121,8 @@ Datasets from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/i
 
 ## Running Tests
 ```bash
-# Run all UCI experiments
-python experiments/uci_experiments.py --max_iter 100000
-
-# Specific dataset and architecture
-python train.py --dataset banknote --architecture concat --encoder_type full
-
-# Ablation studies
-python experiments/ablation_encoder.py
-python experiments/ablation_architecture.py
+# Run a singular UCI experiments
+main.py --max_iter 100000
 ```
 
 ## Authors
