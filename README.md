@@ -54,15 +54,7 @@ Three ways to combine data $x$ and regime $u$:
 - **Comprehensive Evaluation**: RMSE, training curves, regime recovery analysis
 - **Visualization Tools**: Loss decomposition, latent space exploration
 
-## Installation
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/extending-not-miwae.git
-cd extending-not-miwae
 
-# Install dependencies
-pip install -r requirements.txt
-```
 
 ### Requirements
 ```
@@ -74,40 +66,7 @@ scikit-learn>=1.0.0
 matplotlib>=3.5.0
 ```
 
-## Usage
 
-### Training the Extended Model
-```python
-from notMIWAE_extended import notMIWAE_extended
-
-# Initialize model
-model = notMIWAE_extended(
-    n_hidden=128,
-    n_latent=n_features - 1,
-    n_latent_u=10,
-    architecture='concat',  # 'concat', 'additive', 'multiplicative'
-    encoder_type='full'     # 'full' or 'mask_only'
-)
-
-# Train
-model.fit(
-    X_train, S_train,
-    n_samples=20,
-    batch_size=16,
-    max_iter=100000
-)
-
-# Impute
-X_imputed = model.impute(X_test, S_test, L=5000)
-```
-
-### Creating Correlated MNAR
-```python
-from create_correlated_mnar import create_correlated_mnar
-
-# Self-censoring + propagation
-S = create_correlated_mnar(X, mechanism='paired', missing_rate=0.4)
-```
 
 ## Dataset Structure
 ```
@@ -183,31 +142,6 @@ python experiments/ablation_architecture.py
 
 **Mathéo Kina** and **Yee-Yang Hsieh**  
 MVA 2025/2026 - ENS Paris-Saclay  
-Course: Introduction to Probabilistic Graphical Models and Deep Generative Models
-
-**Supervisor**: Pierre-Alexandre Mattei
-
-*Contribution statement*: Both authors contributed to all aspects of the project. Mathéo derived the key theoretical results and adapted the code. Yee-Yang was responsible for experimental results.
-
-## Citation
-```bibtex
-@techreport{kina2026extending,
-  title={Extending not-MIWAE for correlated missing not at random mechanisms},
-  author={Kina, Math{\'e}o and Hsieh, Yee-Yang},
-  institution={ENS Paris-Saclay, MVA Program},
-  year={2026}
-}
-```
-
-**Original not-MIWAE paper**:
-```bibtex
-@inproceedings{ipsen2021notmiwae,
-  title={not-MIWAE: Deep generative modelling with missing not at random data},
-  author={Ipsen, Niels Bruun and Mattei, Pierre-Alexandre and Frellsen, Jes},
-  booktitle={ICLR},
-  year={2021}
-}
-```
 
 ## References
 
