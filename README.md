@@ -55,7 +55,7 @@ Three ways to combine data $x$ and regime $u$:
 
 ### Requirements
 
-⚠️ **Important**: This code uses TensorFlow 1.x (legacy). 
+**Important**: This code uses TensorFlow 1.x (legacy). 
 
 **Tested configuration:**
 ```
