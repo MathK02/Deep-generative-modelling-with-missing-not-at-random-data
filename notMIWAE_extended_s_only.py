@@ -518,4 +518,5 @@ class notMIWAE_extended_2:
     def load(self, name):
         print("Restoring session...")
         self.saver.restore(self.sess, name)
+
         print("Session restored from global step ", self.sess.run(self.global_step))
