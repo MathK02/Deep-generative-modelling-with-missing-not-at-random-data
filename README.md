@@ -24,7 +24,7 @@ We introduce a **latent regime variable** $u \sim \mathcal{N}(0, I)$ to capture 
 $$p_{\theta,\phi}(x, s, z, u) = p_\phi(s|x, u) \cdot p_\theta(x|z) \cdot p(z) \cdot p(u)$$
 
 <p align="center">
-  <img src="images/graphical_model.png" alt="Extended Graphical Model" width="400"/>
+  <img src="images/graphical_latent.png" width="400"/>
 </p>
 
 ### Architecture Variants
@@ -98,18 +98,14 @@ Datasets from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/i
 
 ### Training Dynamics
 
-<p align="center">
-  <img src="images/training_dynamics.png" width="600"/>
-</p>
-
 **Key Finding**: Extended model requires 50k-100k iterations to converge, but then significantly outperforms baseline.
 
 ### Encoder Comparison
 
 | Encoder Type | Banknote | Concrete | Average |
 |--------------|----------|----------|---------|
-| Full $q(u\|x,s)$ | **0.76** | **1.19** | **✓ Best** |
-| Mask-only $q(u\|s)$ | 1.41 | 1.47 | ✗ Worse than baseline |
+| Full $q(u\|x,s)$ | **0.76** | **1.19** | ** Best** |
+| Mask-only $q(u\|s)$ | 1.41 | 1.47 |  Worse than baseline |
 
 **Conclusion**: Using both data and mask in regime encoder is crucial.
 
