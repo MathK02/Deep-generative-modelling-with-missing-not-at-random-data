@@ -139,6 +139,3 @@ MVA 2025/2026 - ENS Paris-Saclay
 
 ---
 
-<p align="center">
-  <b>⭐ Star this repo if you find it useful! ⭐</b>
-</p>
